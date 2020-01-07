@@ -1,0 +1,1 @@
+Tervetuloa olio-ohjelmointi repositorioon!
