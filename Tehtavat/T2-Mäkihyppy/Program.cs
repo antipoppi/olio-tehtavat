@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace T2_Mäkihyppy
+namespace T2_Makihyppy
 {
     class Program
     {
