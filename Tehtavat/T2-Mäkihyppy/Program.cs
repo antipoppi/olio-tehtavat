@@ -32,7 +32,7 @@ namespace T2_Makihyppy
                 pointHolder = pointList[i];
                 totalPoints = pointHolder + totalPoints;
             }
-            //tulostetaan konsoliin mäkihypyn kokonaispisteet
+            //tulostetaan konsoliin hypyn kokonaispisteet
             Console.WriteLine("Total points are " + totalPoints + " points.");
             //loppu
         }
