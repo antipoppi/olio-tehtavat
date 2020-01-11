@@ -35,7 +35,6 @@ namespace T4_Palindromi
                 Console.WriteLine(input + " is not a palindrome.");
             }
             //loppu
-
         }
     }
 }
