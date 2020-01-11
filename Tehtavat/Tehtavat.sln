@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T3-Kulutus", "T3-Kulutus\T3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4-Palindromi", "T4-Palindromi\T4-Palindromi.csproj", "{7AB39FE0-A92D-4B71-96B1-3118EAE0A8B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T5-Nimet", "T5-Nimet\T5-Nimet.csproj", "{6B743F2A-3070-4256-8B0A-1C7EC6BCAE10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7AB39FE0-A92D-4B71-96B1-3118EAE0A8B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AB39FE0-A92D-4B71-96B1-3118EAE0A8B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AB39FE0-A92D-4B71-96B1-3118EAE0A8B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B743F2A-3070-4256-8B0A-1C7EC6BCAE10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B743F2A-3070-4256-8B0A-1C7EC6BCAE10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B743F2A-3070-4256-8B0A-1C7EC6BCAE10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B743F2A-3070-4256-8B0A-1C7EC6BCAE10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
