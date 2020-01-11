@@ -7,7 +7,7 @@
     <ProjectGuid>{7AB39FE0-A92D-4B71-96B1-3118EAE0A8B1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>T4_Palindromi</RootNamespace>
-    <AssemblyName>T4_Palindromi</AssemblyName>
+    <AssemblyName>T4-Palindromi</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
