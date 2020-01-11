@@ -14,7 +14,6 @@ namespace T4_Palindromi
     {
         static void Main(string[] args)
         {
-            //muuttujat
             //kysytään käyttäjältä lause ja tallennetaan se inputiin
             Console.WriteLine("Write a sentence/word to check if it's a palindrome: ");
             string input = Console.ReadLine();
