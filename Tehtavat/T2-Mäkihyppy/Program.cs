@@ -1,4 +1,12 @@
-﻿using System;
+﻿/* T2-Mäkihyppy
+ * Tehtävänanto:
+ * 
+ * Mäkihypyssä käytetään viittä arvostelutuomaria. Kirjoita ohjelma, joka kysyy
+ * arvostelupisteet yhdelle hypylle ja tulostaa tyylipisteiden summan siten, että
+ * summasta on vähennetty pois pienin ja suurin tyylipiste.
+ */
+
+using System;
 using System.Collections.Generic;
 
 namespace T2_Makihyppy

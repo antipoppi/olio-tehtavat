@@ -1,4 +1,19 @@
-﻿using System;
+﻿/* T1-Koulunumero
+ * Tehtävänanto:
+ * 
+ * Tee ohjelma, jossa annetaan oppilaalle koulunumero seuraavan taulukon mukaan
+ * (pistemäärä kysytään ja ohjelma tulostaa numeron):
+ * 
+ *  0  -  1 = 0
+ *  0  -  2 = 1
+ *  4  -  5 = 2
+ *  6  -  7 = 3
+ *  8  -  9 = 4
+ * 10  - 11 = 5
+ * 
+ */
+
+using System;
 
 namespace T1_Koulunumero
 {
