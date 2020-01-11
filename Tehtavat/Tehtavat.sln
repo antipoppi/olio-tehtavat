@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T1-Koulunumero", "T1-Koulun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T2-Mäkihyppy", "T2-Mäkihyppy\T2-Mäkihyppy.csproj", "{F1433293-AB49-45C6-A551-CFD03C4BC5A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T3-Kulutus", "T3-Kulutus\T3-Kulutus.csproj", "{9CDA2986-81A2-47B2-8F9F-3A43E5EB51F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F1433293-AB49-45C6-A551-CFD03C4BC5A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1433293-AB49-45C6-A551-CFD03C4BC5A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1433293-AB49-45C6-A551-CFD03C4BC5A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CDA2986-81A2-47B2-8F9F-3A43E5EB51F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CDA2986-81A2-47B2-8F9F-3A43E5EB51F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CDA2986-81A2-47B2-8F9F-3A43E5EB51F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CDA2986-81A2-47B2-8F9F-3A43E5EB51F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
