@@ -36,7 +36,7 @@ namespace T3_Kulutus
             //lasketaan matkan hinta
             cost = consumption * 1.55;
             //pyöristetään hinnan desimaalit lähimpään senttiin. 
-            cost = Math.Round(cost, 2, MidpointRounding.AwayFromZero);  
+            cost = Math.Round(cost, 2, MidpointRounding.AwayFromZero);
         }
     }
 }
