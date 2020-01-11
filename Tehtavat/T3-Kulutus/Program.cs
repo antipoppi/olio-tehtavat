@@ -21,7 +21,7 @@ namespace T3_Kulutus
             double consumption = 0;
             double cost = 0;
             //kysytään käyttäjältä ajettu matka
-            Console.WriteLine("Give how many kilometers driven: ");
+            Console.Write("Give how many kilometers driven: ");
             tripLenghtString = Console.ReadLine();
             double.TryParse(tripLenghtString, out double tripLenght); //muutetaan matka-string doubleksi
             //kutsutaan metodia
@@ -31,9 +31,12 @@ namespace T3_Kulutus
         }
         public static void CountCost(double tripLength, out double consumption, out double cost)
         {
+            //lasketaan matkan kulutus
             consumption = (7.5 * tripLength) / 100;
+            //lasketaan matkan hinta
             cost = consumption * 1.55;
-            cost = Math.Round(cost, 2, MidpointRounding.AwayFromZero); //pyöristetään desimaalit lähimpään senttiin
+            //pyöristetään hinnan desimaalit lähimpään senttiin. 
+            cost = Math.Round(cost, 2, MidpointRounding.AwayFromZero);  
         }
     }
 }
