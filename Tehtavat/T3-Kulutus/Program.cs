@@ -24,10 +24,11 @@ namespace T3_Kulutus
             Console.Write("Give how many kilometers driven: ");
             tripLenghtString = Console.ReadLine();
             double.TryParse(tripLenghtString, out double tripLenght); //muutetaan matka-string doubleksi
-            //kutsutaan metodia
+            //kutsutaan metodia CountCost
             CountCost(tripLenght, out consumption, out cost);
             //tulostetaan käyttäjälle kuluva bensa- ja rahamäärä
             Console.WriteLine("Gasolin consumption for this trip is " + consumption + " liters and the cost of it is " + cost + " euros.");
+            //loppu
         }
         public static void CountCost(double tripLength, out double consumption, out double cost)
         {
