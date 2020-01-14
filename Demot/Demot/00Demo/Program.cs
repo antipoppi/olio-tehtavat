@@ -43,12 +43,21 @@ namespace _00Demo
             //luodaan olio eli instanssi luokasta Dog. (create a new Dog object instance)
             Dog dog = new Dog();
             //set dog's name
-            dog.Name = "Hiro";
+            dog.Name = "Murre";
             //show object's property and make him growl and bark calling method
             Console.WriteLine("Koirani nimi on {0} ja se sanoo {1} {2}", dog.Name, dog.Growl(), dog.Bark(10));
             //luodaan toinenkin koira
-            Dog puppy = new Dog("Miha"); //viitattiin Dog(string name) konstruktoriin.
+            Dog puppy = new Dog("Ressu"); //viitattiin Dog(string name) konstruktoriin.
             Console.WriteLine("Naapurillani on koira nimeltä {0} ja se sanoo {1} {2}", puppy.Name, puppy.Growl(), puppy.Bark(3));
+            //testataan taulukon (array) luonti ja käyttö
+            Dog[] dogs = new Dog[2];
+            dogs[0] = dog; //Murre ensimmäiseen muistipaikkaan
+            dogs[1] = puppy; //Ressu toiseen muistipaikkaan
+            //näytetään taulukon koirien tiedot
+            foreach (Dog item in dogs)
+            {
+                Console.WriteLine(item.Name + " " + item.Bark(2));
+            }
         }
     }
 }
