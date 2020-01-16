@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T5-Nimet", "T5-Nimet\T5-Nim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T6-Kiuas", "T6-Kiuas\T6-Kiuas.csproj", "{C5E8E17C-AEE0-4AC2-8646-8BF99084BBA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T7-Pesukone", "T7-Pesukone\T7-Pesukone.csproj", "{277BF457-E41A-4AC5-9538-9D1EEC3AF5ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{C5E8E17C-AEE0-4AC2-8646-8BF99084BBA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5E8E17C-AEE0-4AC2-8646-8BF99084BBA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5E8E17C-AEE0-4AC2-8646-8BF99084BBA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{277BF457-E41A-4AC5-9538-9D1EEC3AF5ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{277BF457-E41A-4AC5-9538-9D1EEC3AF5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{277BF457-E41A-4AC5-9538-9D1EEC3AF5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{277BF457-E41A-4AC5-9538-9D1EEC3AF5ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
