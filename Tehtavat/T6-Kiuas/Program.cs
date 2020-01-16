@@ -7,7 +7,6 @@
  * Toteuta Kiuas-luokan ohjelmointi sekä pääohjelma, jolla luot olion Kiuas-luokasta.
  * Säädä kiuas-oliota erilaisilla arvoilla, jätä Console.WriteLine()-tulostuslauseet ohjelmaasi,
  * jotta kiuas-olion käyttäminen jää näkyville. Liitä luokkakaavion kuva projektin repoon sekä ohjelman suorite.
- * Tämä näissä kaikissa tehtävissä.
  */
 
 using System;
@@ -38,20 +37,20 @@ namespace T6_Kiuas
         public bool TurnStoveOff()
         {
             StoveStatus = false;
-            Console.WriteLine("Kiuas has beeen turned off");
+            Console.WriteLine("Kiuas has been turned off");
             return StoveStatus;
         }
         public int SetHumidity(int humidity)
         {
             Humidity = humidity;
-            Console.WriteLine("Humidity has been set to {0}%.", humidity);
-            return humidity;
+            Console.WriteLine("Humidity has been set to {0}%.", Humidity);
+            return Humidity;
         }
         public double SetTemperature(double temperature)
         {
             Temperature = temperature;
-            Console.WriteLine("Temperature has been set to {0}%.", temperature);
-            return temperature;
+            Console.WriteLine("Temperature has been set to {0} Celsius.", Temperature);
+            return Temperature;
         }
         public void PrintInfo()
         {
@@ -66,19 +65,22 @@ namespace T6_Kiuas
     {
         static void Main(string[] args)
         {
-            //create Kiuas object instance
+            //luodaan Kiuas olio-instanssi
             Kiuas kiuas = new Kiuas();
-            //kiuas name
+            //annetaan kiukaalle nimi
             kiuas.Name = "Harvia";
-            //check kiuas status
+            //tarkistetaan onko kiuas päällä vai ei
             kiuas.PrintInfo();
-            //turn kiuas on
+            //laitetaan kiuas päälle, asetetaan lämpötila- ja kosteusarvot
             kiuas.TurnStoveOn();
-            kiuas.SetHumidity(90);
             kiuas.SetTemperature(80.5);
-            kiuas.SetHumidity(80);
+            kiuas.SetHumidity(90);
+            //säädetään lisää lämpötila- ja kosteusarvoa
             kiuas.SetTemperature(84.5);
+            kiuas.SetHumidity(80);
+            //laitetaan kiuas kiinni
             kiuas.TurnStoveOff();
+            //loppu
         }
     }
 }
