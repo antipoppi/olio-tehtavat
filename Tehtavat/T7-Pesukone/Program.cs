@@ -50,13 +50,13 @@ namespace T7_Pesukone
         public bool TurnPowerOn()
         {
             PowerStatus = true;
-            Console.WriteLine("Washing maschine is turned on");
+            Console.WriteLine("Washing machine is turned on");
             return PowerStatus;
         }
         public bool TurnPowerOff()
         {
             PowerStatus = false;
-            Console.WriteLine("Washing maschine is turned off");
+            Console.WriteLine("Washing machine is turned off");
             return PowerStatus;
         }
         public WashPrograms SetProgramme(WashPrograms programId)
@@ -68,13 +68,13 @@ namespace T7_Pesukone
         public int SetTemperature(int i)
         {
             SelectedWashingTemperature = washTemperature[i];
-            Console.WriteLine("Washing temperature has been set to {0}", SelectedWashingTemperature);
+            Console.WriteLine("Washing temperature has been set to {0} Celsius", SelectedWashingTemperature);
             return SelectedWashingTemperature;
         }
         public int SetSpinSpeed(int i)
         {
             SelectedSpinSpeed = SpinSpeed[i];
-            Console.WriteLine("Spinning speed has been set to {0}", SelectedSpinSpeed);
+            Console.WriteLine("Spinning speed has been set to {0}rpm", SelectedSpinSpeed);
             return SelectedSpinSpeed;
         }
         public void PrintInfo()
@@ -93,6 +93,8 @@ namespace T7_Pesukone
             WashingMachine whirlpool = new WashingMachine();
             // käynnistetään pesukone
             whirlpool.TurnPowerOn();
+            // tarkistetaan asetukset tulostamalla ne konsoliin
+            whirlpool.PrintInfo();
             // säädetään pesukoneen asetuksia
             whirlpool.SetProgramme((WashingMachine.WashPrograms)1);
             whirlpool.SetProgramme(WashingMachine.WashPrograms.Wool);
