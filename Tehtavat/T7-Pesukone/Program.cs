@@ -97,7 +97,7 @@ namespace T7_Pesukone
             whirlpool.SetProgramme((WashingMachine.WashPrograms)1);
             whirlpool.SetProgramme(WashingMachine.WashPrograms.Wool);
             whirlpool.SetTemperature(2);
-            whirlpool.SetSpinSpeed(0);
+            whirlpool.SetSpinSpeed(1);
             // tulostetaan whirlpoolin tämän hetkiset asetukset konsoliin
             whirlpool.PrintInfo();
             // suljetaan pesukone
