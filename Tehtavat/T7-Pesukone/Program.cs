@@ -19,8 +19,8 @@ namespace T7_Pesukone
     class WashingMachine
     {
         // field variables
-        public int[] washTemperature = { 10, 30, 60, 90 };
-        public int[] SpinSpeed = { 500, 800 };
+        private readonly int[] washTemperature = { 10, 30, 60, 90 };
+        private readonly int[] SpinSpeed = { 500, 800 };
         // enums
         public enum WashPrograms
         {
