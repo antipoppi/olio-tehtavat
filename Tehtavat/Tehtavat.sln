@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T6-Kiuas", "T6-Kiuas\T6-Kiu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T7-Pesukone", "T7-Pesukone\T7-Pesukone.csproj", "{277BF457-E41A-4AC5-9538-9D1EEC3AF5ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T8-Televisio", "T8-Televisio\T8-Televisio.csproj", "{B620A627-5C58-4955-B953-080453C4E084}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{277BF457-E41A-4AC5-9538-9D1EEC3AF5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{277BF457-E41A-4AC5-9538-9D1EEC3AF5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{277BF457-E41A-4AC5-9538-9D1EEC3AF5ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B620A627-5C58-4955-B953-080453C4E084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B620A627-5C58-4955-B953-080453C4E084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B620A627-5C58-4955-B953-080453C4E084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B620A627-5C58-4955-B953-080453C4E084}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
