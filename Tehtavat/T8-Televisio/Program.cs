@@ -20,7 +20,7 @@ namespace T8_Televisio
     class TV
     {
         // field variables
-        private readonly int maxChannel =  999;
+        private readonly int maxChannel = 999;
         private readonly int minChannel = 0;
         private readonly int maxVolume = 100;
         private readonly int minVolume = 0;
@@ -31,7 +31,7 @@ namespace T8_Televisio
         public bool PowerStatus { get; set; }
         public int CurrentChannel { get; set; }
         public int CurrentVolume { get; set; }
-        public bool TeletxtStatus { get; set; }
+        public bool TeletextStatus { get; set; }
         public int CurrentTeletextChannel { get; set; }
         // constructors
         public TV()
@@ -42,7 +42,7 @@ namespace T8_Televisio
             PowerStatus = false;
             CurrentChannel = 1;
             CurrentVolume = 50;
-            TeletxtStatus = false;
+            TeletextStatus = false;
         }
         // methods
         public bool TogglePower()
@@ -62,7 +62,7 @@ namespace T8_Televisio
             }
             else
             {
-                CurrentChannel = maxChannel;
+                CurrentChannel = minChannel;
                 return CurrentChannel;
             }
         }
@@ -117,11 +117,11 @@ namespace T8_Televisio
         }
         public bool ToggleTeletext()
         {
-            if (TeletxtStatus == false)
-                TeletxtStatus = true;
+            if (TeletextStatus == false)
+                TeletextStatus = true;
             else
-                TeletxtStatus = false;
-            return TeletxtStatus;
+                TeletextStatus = false;
+            return TeletextStatus;
         }
         public int SetTeletextChannel(int teltxtNmb)
         {
@@ -134,29 +134,41 @@ namespace T8_Televisio
         static void Main(string[] args)
         {
             TV televisio = new TV();
+            // laitetaan televisio päälle (oletuksena pois päältä)
             televisio.TogglePower();
             Console.WriteLine("Television virtastatus on {0}. (true on päällä, false pois päältä)", televisio.PowerStatus);
             Console.WriteLine("Tämänhetkinen äänenvoimakkuustaso on {0} ja kanava on {1}.", televisio.CurrentVolume, televisio.CurrentChannel);
+            // "käännetään" seuraavalle kanavalle
             televisio.NextChannel();
             Console.WriteLine("Tämän hetkinen kanava on {0}", televisio.CurrentChannel);
+            // lasketaan äänenvoimakkuutta yksi painallus
             televisio.VolumeDown();
             Console.WriteLine("Tämän hetkinen äänenvoimakkuus on {0}", televisio.CurrentVolume);
+            // asetetaan kanava 999
             televisio.SetChannel(999);
             Console.WriteLine("Tämän hetkinen kanava on {0}", televisio.CurrentChannel);
-            televisio.NextChannel(); // TÄÄ EI TOIMI
+            // "käännetään" seuraavalle kanavalle
+            televisio.NextChannel();
             Console.WriteLine("Tämän hetkinen kanava on {0}", televisio.CurrentChannel);
+            // mutetetaan äänenvoimakkuus
             televisio.MuteVolume();
             Console.WriteLine("Tämän hetkinen äänenvoimakkuus on {0}", televisio.CurrentVolume);
+            // laitetaan teksti-tv päälle (oletuksena pois päältä)
             televisio.ToggleTeletext();
-            Console.WriteLine("Tekstitv status on {0}. (true päällä, false pois päältä", televisio.TeletxtStatus);
+            Console.WriteLine("Tekstitv status on {0}. (true päällä, false pois päältä", televisio.TeletextStatus);
+            // asetetaan teksti-tv kanavalle 666.
             televisio.SetTeletextChannel(666);
             Console.WriteLine("Tekstitv sivu on {0}", televisio.CurrentTeletextChannel);
+            // suljetaan teksti-tv
             televisio.ToggleTeletext();
-            Console.WriteLine("Tekstitv status on {0}. (true päällä, false pois päältä", televisio.TeletxtStatus);
+            Console.WriteLine("Tekstitv status on {0}. (true päällä, false pois päältä", televisio.TeletextStatus);
+            // asetetaan kanavalle 0
             televisio.SetChannel(0);
             Console.WriteLine("Tämän hetkinen kanava on {0}", televisio.CurrentChannel);
+            // käännetään edelliselle kanavalle
             televisio.PreviousChannel();
             Console.WriteLine("Tämän hetkinen kanava on {0}", televisio.CurrentChannel);
+            // suljetaan televisio
             televisio.TogglePower();
             Console.WriteLine("Television virtastatus on {0}. (true on päällä, false pois päältä)", televisio.PowerStatus);
         }
