@@ -27,7 +27,8 @@ namespace T8_Televisio
         public bool PowerStatus { get; set; }
         public int SelectedChannel { get; set; }
         public int CurrentVolume { get; set; }
-        public bool Teletext { get; set; }
+        public bool TeletxtStatus { get; set; }
+        public int TeletextChnl { get; set; }
         // constructors
         // methods
         public bool TurnTVOn()
@@ -77,6 +78,24 @@ namespace T8_Televisio
             CurrentVolume = 0;
             Console.WriteLine("Volume is now muted");
             return CurrentVolume;
+        }
+        public bool TeletextOn()
+        {
+            TeletxtStatus = true;
+            Console.WriteLine("Teletext is on");
+            return TeletxtStatus;
+        }
+        public bool TeletextOff()
+        {
+            TeletxtStatus = false;
+            Console.WriteLine("Teletext is off");
+            return TeletxtStatus;
+        }
+        public int SetTeletextChannel(int teltxtNmb)
+        {
+            TeletextChnl = teltxtNmb;
+            Console.WriteLine("Teletext channel is showing page {0}", TeletextChnl);
+            return TeletextChnl;
         }
     }
     class Program
