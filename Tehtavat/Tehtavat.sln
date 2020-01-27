@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T8-Televisio", "T8-Televisi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T9-Vehicle", "T9-Vehicle\T9-Vehicle.csproj", "{98A5E1BB-4DC6-456D-9D21-17305A7BA535}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T10-Opiskelija", "T10-Opiskelija\T10-Opiskelija.csproj", "{8EE8423A-A42F-4EDE-AD95-B18149CB213B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{98A5E1BB-4DC6-456D-9D21-17305A7BA535}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98A5E1BB-4DC6-456D-9D21-17305A7BA535}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98A5E1BB-4DC6-456D-9D21-17305A7BA535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EE8423A-A42F-4EDE-AD95-B18149CB213B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EE8423A-A42F-4EDE-AD95-B18149CB213B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EE8423A-A42F-4EDE-AD95-B18149CB213B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EE8423A-A42F-4EDE-AD95-B18149CB213B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
