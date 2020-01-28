@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "00Demo", "00Demo\00Demo.csproj", "{F368515F-C3BE-4B7B-AE6F-B7EE34EC8B9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OODemoCar", "OODemoCar\OODemoCar.csproj", "{3164F786-F67E-4879-BA5B-EC8927444C14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OODemoCar", "OODemoCar\OODemoCar.csproj", "{3164F786-F67E-4879-BA5B-EC8927444C14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OODemoKulutus", "OODemoKulutus\OODemoKulutus.csproj", "{A66D3A97-C312-4901-B5F1-C287E594C7AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3164F786-F67E-4879-BA5B-EC8927444C14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3164F786-F67E-4879-BA5B-EC8927444C14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3164F786-F67E-4879-BA5B-EC8927444C14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A66D3A97-C312-4901-B5F1-C287E594C7AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66D3A97-C312-4901-B5F1-C287E594C7AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66D3A97-C312-4901-B5F1-C287E594C7AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66D3A97-C312-4901-B5F1-C287E594C7AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
