@@ -12,7 +12,7 @@ namespace T15_Employees
         // korvataan ToString-metodi omalla toteutuksella
         public override string ToString()
         {
-            return $"Työntekijä: {Name}, {Profession}, Palkka: {Salary} euroa"; 
+            return $"Työntekijä: {Name}, {Profession}, Palkka: {Salary}€"; 
             // dollarimerkki=merkkijono jota "koostetaan" (class System.String)
         }
     }

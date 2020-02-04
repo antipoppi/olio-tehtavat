@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic; // for List<T>
+using System.Text; // for € in console
 
 namespace T15_Employees
 {
@@ -18,6 +19,7 @@ namespace T15_Employees
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8; // asettaa konsolin ulostulo-enkoodaukseksi UTF8, tällä saa €-merkin tulostettua oikein konsoliin
             Console.WriteLine("Firman Boss & Dumbs Ltd työntekijät ovat");
             // luodaan pari työntekijää ja yksi pomo
             Employee employee = new Employee();
