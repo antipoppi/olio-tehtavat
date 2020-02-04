@@ -48,6 +48,7 @@ namespace T15_Employees
                 // jos Boss-olio niin huomioidaan myös Bonus
                 if (item is Boss) // is = boolean (tosi/epätosi) arvo
                 {
+                    // muunnetaan Employee-tyyppinen olio Boss-olioksi explisiittisesti
                     Boss b = (Boss)item;
                     totalSalaryCost += b.Bonus;
                 }
