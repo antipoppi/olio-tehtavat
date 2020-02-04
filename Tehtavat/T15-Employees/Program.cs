@@ -31,6 +31,14 @@ namespace T15_Employees
             List<Employee> staff = new List<Employee>();
             staff.Add(employee); // Kirsin tiedot sisältävä olio lisätään listaan employees
             staff.Add(employee2); // Matin tiedot -::-
+            // pomot
+            Boss boss = new Boss();
+            boss.Name = "John Doe";
+            boss.Profession = "Manager";
+            boss.Salary = 5000F;
+            boss.Bonus = 1000F;
+            boss.Car = "Audi";
+            staff.Add(boss); // perityn luokan olioita voi laittaa listaan, jonka tyyppinä on kantaluokka (Employee)
             // näytetään kaikki listan työntekijät
             foreach (Employee item in staff)
             {

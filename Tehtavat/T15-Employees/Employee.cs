@@ -20,5 +20,10 @@ namespace T15_Employees
     {
         public string Car { get; set; }
         public float Bonus { get; set; }
+        // korvataan ToString-metodi omalla toteutuksella
+        public override string ToString()
+        {
+            return base.ToString() + ", Bonus " + Bonus + "€, Auto: " + Car;
+        }
     }
 }
