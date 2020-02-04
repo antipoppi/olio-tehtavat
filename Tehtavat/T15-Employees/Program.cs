@@ -28,9 +28,9 @@ namespace T15_Employees
             employee.Salary = 3000F;
             Employee employee2 = new Employee() { Name = "Matti Mainio", Profession = "Developer", Salary = 3000F };
             // työntekijät listaan
-            List<Employee> staff = new List<Employee>();
-            staff.Add(employee); // Kirsin tiedot sisältävä olio lisätään listaan employees
-            staff.Add(employee2); // Matin tiedot -::-
+            List<Employee> staffList = new List<Employee>();
+            staffList.Add(employee); // Kirsin tiedot sisältävä olio lisätään listaan employees
+            staffList.Add(employee2); // Matin tiedot -::-
             // pomot
             Boss boss = new Boss();
             boss.Name = "John Doe";
@@ -38,12 +38,21 @@ namespace T15_Employees
             boss.Salary = 5000F;
             boss.Bonus = 1000F;
             boss.Car = "Audi";
-            staff.Add(boss); // perityn luokan olioita voi laittaa listaan, jonka tyyppinä on kantaluokka (Employee)
-            // näytetään kaikki listan työntekijät
-            foreach (Employee item in staff)
+            staffList.Add(boss); // perityn luokan olioita voi laittaa listaan, jonka tyyppinä on kantaluokka (Employee)
+            // näytetään kaikki listan työntekijät ja lasketaan palkkojen kokonaissumma
+            float totalSalaryCost = 0;
+            foreach (Employee item in staffList)
             {
                 Console.WriteLine(item.ToString());
+                totalSalaryCost += item.Salary;
+                // jos Boss-olio niin huomioidaan myös Bonus
+                if (item is Boss) // is = boolean (tosi/epätosi) arvo
+                {
+                    Boss b = (Boss)item;
+                    totalSalaryCost += b.Bonus;
+                }
             }
+            Console.WriteLine("Työntekijöiden yhteenlaskettu palkkasumma on {0}€", totalSalaryCost);
         }
     }
 }
