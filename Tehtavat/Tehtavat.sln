@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T11-CD", "T11-CD\T11-CD.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T20-Nisakas", "T20-Nisakas\T20-Nisakas.csproj", "{D8E1AB3F-6504-4EE9-9AF5-25CB5E788383}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T26-Auto", "T26-Auto\T26-Auto.csproj", "{EF049491-7EE8-47DA-87B1-DA3D94DFD50A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{D8E1AB3F-6504-4EE9-9AF5-25CB5E788383}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8E1AB3F-6504-4EE9-9AF5-25CB5E788383}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8E1AB3F-6504-4EE9-9AF5-25CB5E788383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF049491-7EE8-47DA-87B1-DA3D94DFD50A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF049491-7EE8-47DA-87B1-DA3D94DFD50A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF049491-7EE8-47DA-87B1-DA3D94DFD50A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF049491-7EE8-47DA-87B1-DA3D94DFD50A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
