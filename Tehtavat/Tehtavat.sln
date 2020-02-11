@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T10-Opiskelija", "T10-Opisk
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T15-Employees", "T15-Employees\T15-Employees.csproj", "{F9275314-452B-4F94-903B-6BD3E2873E0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T11-CD", "T11-CD\T11-CD.csproj", "{93A99091-4AEE-41F9-B19E-770AACF88A5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T11-CD", "T11-CD\T11-CD.csproj", "{93A99091-4AEE-41F9-B19E-770AACF88A5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T20-Nisakas", "T20-Nisakas\T20-Nisakas.csproj", "{D8E1AB3F-6504-4EE9-9AF5-25CB5E788383}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{93A99091-4AEE-41F9-B19E-770AACF88A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93A99091-4AEE-41F9-B19E-770AACF88A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93A99091-4AEE-41F9-B19E-770AACF88A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8E1AB3F-6504-4EE9-9AF5-25CB5E788383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8E1AB3F-6504-4EE9-9AF5-25CB5E788383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8E1AB3F-6504-4EE9-9AF5-25CB5E788383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8E1AB3F-6504-4EE9-9AF5-25CB5E788383}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
