@@ -9,7 +9,6 @@ namespace T20_Nisakas
         public abstract float Ika { get; set; }
         public abstract string Liiku();
     }
-
     class Ihminen : Nisakas
     {
         public override float Ika { get; set; }
