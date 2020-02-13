@@ -27,9 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T15-Employees", "T15-Employ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T11-CD", "T11-CD\T11-CD.csproj", "{93A99091-4AEE-41F9-B19E-770AACF88A5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T20-Nisakas", "T20-Nisakas\T20-Nisakas.csproj", "{D8E1AB3F-6504-4EE9-9AF5-25CB5E788383}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T20-Nisakas", "T20-Nisakas\T20-Nisakas.csproj", "{D8E1AB3F-6504-4EE9-9AF5-25CB5E788383}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T26-Auto", "T26-Auto\T26-Auto.csproj", "{EF049491-7EE8-47DA-87B1-DA3D94DFD50A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T26-Auto", "T26-Auto\T26-Auto.csproj", "{EF049491-7EE8-47DA-87B1-DA3D94DFD50A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T12-Tank", "T12-Tank\T12-Tank.csproj", "{BCA092B9-A687-4808-BABD-62FD321C99BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{EF049491-7EE8-47DA-87B1-DA3D94DFD50A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF049491-7EE8-47DA-87B1-DA3D94DFD50A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF049491-7EE8-47DA-87B1-DA3D94DFD50A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCA092B9-A687-4808-BABD-62FD321C99BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCA092B9-A687-4808-BABD-62FD321C99BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCA092B9-A687-4808-BABD-62FD321C99BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCA092B9-A687-4808-BABD-62FD321C99BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
