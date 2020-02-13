@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T20-Nisakas", "T20-Nisakas\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T26-Auto", "T26-Auto\T26-Auto.csproj", "{EF049491-7EE8-47DA-87B1-DA3D94DFD50A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T12-Tank", "T12-Tank\T12-Tank.csproj", "{BCA092B9-A687-4808-BABD-62FD321C99BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T12-Tank", "T12-Tank\T12-Tank.csproj", "{BCA092B9-A687-4808-BABD-62FD321C99BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T13-Elevator", "T13-Elevator\T13-Elevator.csproj", "{80596E3B-D2A4-4839-83A8-88556C28EB62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{BCA092B9-A687-4808-BABD-62FD321C99BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCA092B9-A687-4808-BABD-62FD321C99BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCA092B9-A687-4808-BABD-62FD321C99BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80596E3B-D2A4-4839-83A8-88556C28EB62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80596E3B-D2A4-4839-83A8-88556C28EB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80596E3B-D2A4-4839-83A8-88556C28EB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80596E3B-D2A4-4839-83A8-88556C28EB62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
