@@ -45,28 +45,17 @@ namespace T13_Elevator
         {
             return $"The floor number is too small!";
         }
-        public bool AskFloor()
+        public string SetFloor(int inputFloor)
         {
-            while (true)
+            if (inputFloor >= minFloor && inputFloor <= maxfloor)
             {
-                Console.WriteLine(PrintFloorStatus());
-                Console.Write("Give a new floor number (1-5) > ");
-                string inputString = Console.ReadLine();
-                int.TryParse(inputString, out int inputFloor);
-                if (inputFloor >= minFloor && inputFloor <= maxfloor)
-                {
-                    floor = inputFloor;
-                }
-                else if (inputFloor > maxfloor)
-                {
-                    Console.WriteLine(InformTooBigNumber());
-                }
-                else
-                {
-                    Console.WriteLine(InformTooSmallNumber());
-                }
+                floor = inputFloor;
+                return PrintFloorStatus();
             }
-
+            else if (inputFloor > maxfloor)
+                return InformTooBigNumber();
+            else
+                return InformTooSmallNumber();
         }
     }
     class Program
@@ -74,7 +63,14 @@ namespace T13_Elevator
         static void Main(string[] args)
         {
             Elevator hissi = new Elevator();
-            Console.WriteLine(hissi.AskFloor()); 
+            Console.WriteLine(hissi.PrintFloorStatus());
+            while (true)
+            {
+                Console.Write("Give a new floor number (1-5) > ");
+                string inputString = Console.ReadLine();
+                int.TryParse(inputString, out int inputFloor);
+                Console.WriteLine(hissi.SetFloor(inputFloor));
+            }
         }
     }
 }
