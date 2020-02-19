@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T13-Elevator", "T13-Elevato
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T14-Amplifier", "T14-Amplifier\T14-Amplifier.csproj", "{90662DAF-7C59-40E3-A6F8-4B1801388E10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T16-Vehicles", "T16-Vehicles\T16-Vehicles.csproj", "{F8E05611-AD23-42E4-906B-530791F8D58F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T16-Vehicles", "T16-Vehicles\T16-Vehicles.csproj", "{F8E05611-AD23-42E4-906B-530791F8D58F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T17-Radio", "T17-Radio\T17-Radio.csproj", "{F96F830E-A15F-4314-A198-3C7D8318AC99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{F8E05611-AD23-42E4-906B-530791F8D58F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8E05611-AD23-42E4-906B-530791F8D58F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8E05611-AD23-42E4-906B-530791F8D58F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F96F830E-A15F-4314-A198-3C7D8318AC99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F96F830E-A15F-4314-A198-3C7D8318AC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F96F830E-A15F-4314-A198-3C7D8318AC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F96F830E-A15F-4314-A198-3C7D8318AC99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
