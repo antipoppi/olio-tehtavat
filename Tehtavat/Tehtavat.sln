@@ -41,9 +41,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T16-Vehicles", "T16-Vehicle
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T17-Radio", "T17-Radio\T17-Radio.csproj", "{F96F830E-A15F-4314-A198-3C7D8318AC99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T18-Tavarat", "T18-Tavarat\T18-Tavarat.csproj", "{309A9230-855C-496E-A452-222B3581B430}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T18-Tavarat", "T18-Tavarat\T18-Tavarat.csproj", "{309A9230-855C-496E-A452-222B3581B430}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T19-Perintä", "T19-Perintä\T19-Perintä.csproj", "{BC137904-158F-4F6E-BAE4-DA59581EF3F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T19-Perintä", "T19-Perintä\T19-Perintä.csproj", "{BC137904-158F-4F6E-BAE4-DA59581EF3F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T23-NewCD", "T23-NewCD\T23-NewCD.csproj", "{6FDC136C-442E-4D02-A82F-3086CC9C1A54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +137,10 @@ Global
 		{BC137904-158F-4F6E-BAE4-DA59581EF3F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC137904-158F-4F6E-BAE4-DA59581EF3F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC137904-158F-4F6E-BAE4-DA59581EF3F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FDC136C-442E-4D02-A82F-3086CC9C1A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FDC136C-442E-4D02-A82F-3086CC9C1A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FDC136C-442E-4D02-A82F-3086CC9C1A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FDC136C-442E-4D02-A82F-3086CC9C1A54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
