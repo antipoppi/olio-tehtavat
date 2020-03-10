@@ -32,9 +32,17 @@ namespace T26_Auto
     }
     class Auto
     {
+        private readonly int MaxRenkaidenLkm = 5;
         public string Merkki { get; set; }
         public string Malli { get; set; }
-        public List<Rengas> Renkaat { get; set; }
+        public List<Rengas> Renkaat { get; private set; }
+        public int RenkaidenLkm
+        {
+            get
+            {
+                return Renkaat.Count;
+            }
+        }
         public Auto()
         {
             Renkaat = new List<Rengas>(); // Auto olio sisältää nyt tyhjän listan
@@ -44,17 +52,34 @@ namespace T26_Auto
     {
         static void Main(string[] args)
         {
+            // luodaan auto1
             Console.WriteLine("Testataan autoa ja sen renkaita");
-            Auto auto = new Auto() { Merkki = "Skoda", Malli = "Octavia" };
-            // ostetaan neljä rengasta ja lisätään ne auto-olioon
+            Auto auto1 = new Auto() { Merkki = "Skoda", Malli = "Octavia" };
+            // ostetaan neljä rengasta ja lisätään ne auto1-olioon
             for (int i = 0; i < 4; i++)
             {
-                Rengas rengas = new Rengas() { Valmistaja = "Nokia", Malli = "Hakkapeliitta", RengasKoko = "205/45R16" };
-                auto.Renkaat.Add(rengas);
+                Rengas skodaRengas = new Rengas() { Valmistaja = "Nokia", Malli = "Hakkapeliitta", RengasKoko = "205/45R16" };
+                auto1.Renkaat.Add(skodaRengas);
             }
-            // näytetään auton renkaat
-            Console.WriteLine($"Arskan autossa {auto.Merkki} {auto.Malli} on seuraavat renkaat");
-            foreach (var item in auto.Renkaat)
+            // näytetään auto1 renkaat
+            Console.WriteLine($"Arskan autossa {auto1.Merkki} {auto1.Malli} on seuraavat renkaat");
+            foreach (var item in auto1.Renkaat)
+            {
+                Console.WriteLine($" - {item.Valmistaja} {item.Malli} {item.RengasKoko}");
+            }
+            // luodaan auto2 ja ostetaan lisätään siihen neljä rengasta
+            Auto auto2 = new Auto() { Merkki = "Fiat", Malli = "Punto" };
+            for (int i = 0; i < 4; i++)
+            {
+                Rengas fiatRengas = new Rengas() { Valmistaja = "Hankook", Malli = "HongKong", RengasKoko = "180/40R15" };
+                auto2.Renkaat.Add(fiatRengas);
+            }
+            // lisäksi auto2 kuuluu yksi vararengas
+            Rengas fiatVaraRengas = new Rengas() { Valmistaja = "Hankook", Malli = "SafetyFirst -BackUp tire", RengasKoko = "175/35R15" };
+            auto2.Renkaat.Add(fiatVaraRengas);
+            // näytetään auto2 renkaat
+            Console.WriteLine($"Autossa {auto2.Merkki} {auto2.Malli} on seuraavat renkaat");
+            foreach (var item in auto2.Renkaat)
             {
                 Console.WriteLine($" - {item.Valmistaja} {item.Malli} {item.RengasKoko}");
             }
