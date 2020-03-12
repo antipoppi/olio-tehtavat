@@ -32,25 +32,38 @@ namespace T23_NewCD
                 return Songs.Count;
             }
         }
-        public double TotalLength { get; private set; } // tää laskee kokonaispituuden
+        public string TotalLength { get; private set; } // tää laskee kokonaispituuden
         public List<Song> Songs { get; private set; }
         // constructor
         public CD()
         {
             Songs = new List<Song>();
         }
+        public double CountTotalLenght()
+        {
+
+        }
     }
     public class Song
     {
-        public string SongName { get; private set; }
-        public string Length { get; private set; }
-    }
+        public string SongName { get; set; }
+        public double Length { get; set; }
+        public double ConvertLengthToSec()
+        {
+            double minutes = (int)Length;
+            double minutesInSec = (int)minutes * 60;
+            double seconds = (Length - minutes) * 100;
+            double total = minutesInSec + seconds;
+            return total;
+        }
+ }
 
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Song laulu = new Song() { Length = 2.52 };
+            Console.WriteLine(laulu.ConvertLengthToSec());
         }
     }
 }
