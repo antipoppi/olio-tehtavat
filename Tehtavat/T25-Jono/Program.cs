@@ -17,7 +17,9 @@ namespace T25_Jono
 {
     class Asiakkaat
     {
+        //properties
         public string Name { get; set; }
+        // methods
         public override string ToString()
         {
             return $"{Name}";
@@ -48,17 +50,18 @@ namespace T25_Jono
         {
             return $"Asiakas {asiakas.ToString()} maksaa ostoksensa";
         }
-        public string PoistuJonosta()
+        public string PoistuJonosta(Asiakkaat asiakas)
         {
-            return $"{Jono.Peek()} lähti jonosta. {Jono.Dequeue()}";
+            return $"{asiakas.ToString()} lähti jonosta. {Jono.Dequeue()}";
         }
     }
     class Program
     {
         static void Main(string[] args)
         {
+            // luodaan kassajono
             Kassajono alepanJono = new Kassajono();
-            string nimi = "";
+            string nimi = ""; // esitellään string "nimi", että sitä ei tarvitse loopissa esitellä aina uudestaan
             do
             {
                 Console.WriteLine("Anna jonoon tulevan asiakkaan nimi (enter lopettaa):");
@@ -72,13 +75,13 @@ namespace T25_Jono
                 {
                     Console.WriteLine(item.ToString());
                 }
-            } while (nimi != "");
-            while (alepanJono.Pituus > 0)
+            } while (nimi != ""); // asiakkaiden nimien syttömäninen loppuu enteriin
+            while (alepanJono.Pituus > 0) // looppaa niin kauan kunnes jonon pituus nolla
             {
                 Console.WriteLine("----- Palvellaan jonon ensimmäistä asiakasta -----");
                 Console.WriteLine("Palvelen asiakasta:" + alepanJono.Jono.Peek());
                 Console.WriteLine(alepanJono.MaksaOstokset(alepanJono.Jono.Peek()));
-                alepanJono.PoistuJonosta();
+                alepanJono.PoistuJonosta(alepanJono.Jono.Peek());
                 Console.WriteLine($"Alepan jonossa on nyt {alepanJono.Pituus} asiakasta");
             }
             Console.WriteLine("Jono on nyt tyhjä.");
