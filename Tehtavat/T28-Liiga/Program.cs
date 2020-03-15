@@ -43,42 +43,28 @@ namespace T28_Liiga
         public Joukkue(string joukkue)
         {
             Pelaajat = new List<Pelaaja>();
-            StringPelaajat = HaePelaajat(joukkue);
+            HaePelaajat(joukkue);
         }
-        internal string HaePelaajat(string joukkue)
+        internal void HaePelaajat(string joukkue)
         {
             if (joukkue == "jyp")
             {
-                string pelaajat = "";
-                Pelaajat.Add(new Pelaaja { EtuNimi = "Markus", SukuNimi = "Ruusu", PeliPaikka = "MV", Numero = "40" });
-                Pelaajat.Add(new Pelaaja { EtuNimi = "Anttoni", SukuNimi = "Honka", PeliPaikka = "P", Numero = "3" });
-                Pelaajat.Add(new Pelaaja { EtuNimi = "Juuso", SukuNimi = "Vainio", PeliPaikka = "P", Numero = "5" });
-                Pelaajat.Add(new Pelaaja { EtuNimi = "Jani", SukuNimi = "Tuppurainen", PeliPaikka = "LH", Numero = "12" });
-                Pelaajat.Add(new Pelaaja { EtuNimi = "Juha-Pekka", SukuNimi = "Hytönen", PeliPaikka = "KH", Numero = "15" });
-                Pelaajat.Add(new Pelaaja { EtuNimi = "Samuli", SukuNimi = "Ratinen", PeliPaikka = "LH", Numero = "17" });
-                foreach (Pelaaja item in Pelaajat)
-                {
-                    pelaajat += item.ToString() + "\n";
-                }
-                return pelaajat;
+                Pelaajat.Add(new Pelaaja("Markus", "Ruusu", "MV", "40"));
+                Pelaajat.Add(new Pelaaja("Anttoni", "Honka", "P", "3"));
+                Pelaajat.Add(new Pelaaja("Juuso", "Vainio", "P", "5"));
+                Pelaajat.Add(new Pelaaja("Jani", "Tuppurainen", "LH", "12"));
+                Pelaajat.Add(new Pelaaja("Juha-Pekka", "Hytönen", "KH", "15"));
+                Pelaajat.Add(new Pelaaja("Samuli", "Ratinen", "LH", "17"));
             }
             else if (joukkue == "kalpa")
             {
-                string pelaajat = "";
                 Pelaajat.Add(new Pelaaja("Eero", "Kilpeläinen", "MV", "37" ));
-                Pelaajat.Add(new Pelaaja { EtuNimi = "Otto", SukuNimi = "Huttunen", PeliPaikka = "P", Numero = "2" });
-                Pelaajat.Add(new Pelaaja { EtuNimi = "Mikael", SukuNimi = "Seppälä", PeliPaikka = "P", Numero = "5" });
-                Pelaajat.Add(new Pelaaja { EtuNimi = "Tuomas", SukuNimi = "Vartiainen", PeliPaikka = "LH", Numero = "13" });
-                Pelaajat.Add(new Pelaaja { EtuNimi = "Joni", SukuNimi = "Ikonen", PeliPaikka = "KH", Numero = "16" });
-                Pelaajat.Add(new Pelaaja { EtuNimi = "Tommi", SukuNimi = "Jokinen", PeliPaikka = "LH", Numero = "42" });
-                foreach (Pelaaja item in Pelaajat)
-                {
-                    pelaajat += item.ToString() + "\n";
-                }
-                return pelaajat;
+                Pelaajat.Add(new Pelaaja("Otto", "Huttunen", "P", "2"));
+                Pelaajat.Add(new Pelaaja("Mikael", "Seppälä", "P", "5"));
+                Pelaajat.Add(new Pelaaja("Tuomas", "Vartiainen", "LH", "13"));
+                Pelaajat.Add(new Pelaaja("Joni", "Ikonen", "KH", "16"));
+                Pelaajat.Add(new Pelaaja("Tommi", "Jokinen","LH", "42"));
             }
-            else
-                return $"Väärä joukkueen nimi!";
         }
         public string PoistaPelaaja(List<Pelaaja> Pelaajat, string etunimi, string sukunimi, string pelipaikka, string numero)
         {
@@ -90,7 +76,7 @@ namespace T28_Liiga
             {
                 return $"Pelaajan poistaminen joukkueesta {Nimi} ei onnistunut: " + e.Message;
             }
-            return $"Joukkueesta {Nimi} on poistettu pelaaja {etunimi + " " +sukunimi}";
+            return $"Joukkueesta {Nimi} on poistettu pelaaja {etunimi + " " +sukunimi} \n";
         }
         public string LisääPelaaja(List<Pelaaja> Pelaajat, string etunimi, string sukunimi, string pelipaikka, string numero)
         {
@@ -102,11 +88,16 @@ namespace T28_Liiga
             {
                 return $"Pelaajan poistaminen joukkueesta {Nimi} ei onnistunut: " + e.Message;
             }
-            return $"Joukkueeseen {Nimi} on lisätty pelaaja {etunimi + " " + sukunimi}" + "\n";
+            return $"Joukkueeseen {Nimi} on lisätty pelaaja {etunimi + " " + sukunimi} \n";
         }
         public string TulostaPelaajat()
         {
-            return $"Joukkueessa {Nimi} on seuraavat pelaajat: \n" + StringPelaajat;
+            string pelaajat = "";
+            foreach (Pelaaja item in Pelaajat)
+            {
+                pelaajat += item.ToString() + "\n";
+            }
+            return $"Joukkueessa {Nimi} on seuraavat pelaajat: \n {pelaajat}";
         }
     }
 
