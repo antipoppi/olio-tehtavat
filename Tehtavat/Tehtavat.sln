@@ -55,6 +55,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T27-Kulkuneuvot", "T27-Kulk
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T28-Liiga", "T28-Liiga\T28-Liiga.csproj", "{FB1F1C41-0590-400C-829A-6AEB3CD5B8AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T29-LiigaLevylle", "T29-LiigaLevylle\T29-LiigaLevylle.csproj", "{83EAEF33-83A7-4718-9C3F-F6900F33E05D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{FB1F1C41-0590-400C-829A-6AEB3CD5B8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB1F1C41-0590-400C-829A-6AEB3CD5B8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB1F1C41-0590-400C-829A-6AEB3CD5B8AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83EAEF33-83A7-4718-9C3F-F6900F33E05D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83EAEF33-83A7-4718-9C3F-F6900F33E05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83EAEF33-83A7-4718-9C3F-F6900F33E05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83EAEF33-83A7-4718-9C3F-F6900F33E05D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
