@@ -89,13 +89,6 @@ namespace T27_Kulkuneuvot
                 new Rengas { Valmistaja = "Pinepeak", Malli = "Reino", RengasKoko = "60/35R8" } };
         }
     }
-    class VehicleException : Exception
-    {
-        public VehicleException(string message) : base(message)
-        {
-
-        }
-    }
     class Program
     {
         static void Main(string[] args)
