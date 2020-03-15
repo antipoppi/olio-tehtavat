@@ -47,9 +47,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T19-Perint√§", "T19-Perint√
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T23-NewCD", "T23-NewCD\T23-NewCD.csproj", "{6FDC136C-442E-4D02-A82F-3086CC9C1A54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T24-Kortit", "T24-Kortit\T24-Kortit.csproj", "{5EC0143D-0C24-43C3-BEE5-15FA79F10B06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T24-Kortit", "T24-Kortit\T24-Kortit.csproj", "{5EC0143D-0C24-43C3-BEE5-15FA79F10B06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T25-Jono", "T25-Jono\T25-Jono.csproj", "{C2F422A8-4FFD-4F41-8F24-E79044A38C65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T25-Jono", "T25-Jono\T25-Jono.csproj", "{C2F422A8-4FFD-4F41-8F24-E79044A38C65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T27-Kulkuneuvot", "T27-Kulkuneuvot\T27-Kulkuneuvot.csproj", "{A735E721-8C88-4A92-9374-70A6FE04C192}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +155,10 @@ Global
 		{C2F422A8-4FFD-4F41-8F24-E79044A38C65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2F422A8-4FFD-4F41-8F24-E79044A38C65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2F422A8-4FFD-4F41-8F24-E79044A38C65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A735E721-8C88-4A92-9374-70A6FE04C192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A735E721-8C88-4A92-9374-70A6FE04C192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A735E721-8C88-4A92-9374-70A6FE04C192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A735E721-8C88-4A92-9374-70A6FE04C192}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
