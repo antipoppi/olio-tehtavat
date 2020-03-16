@@ -46,13 +46,21 @@ namespace T25_Jono
         {
             Jono.Enqueue(asiakas);
         }
-        public string MaksaOstokset(Asiakkaat asiakas)
+        public string PalveleAsiakasta()
         {
-            return $"Asiakas {asiakas.ToString()} maksaa ostoksensa";
+            string kuka = Jono.Peek().ToString();
+            return $"Palvelen asiakasta: { kuka }";
         }
-        public string PoistuJonosta(Asiakkaat asiakas)
+        public string MaksaOstokset()
         {
-            return $"{asiakas.ToString()} lähti jonosta. {Jono.Dequeue()}";
+            string kuka = Jono.Peek().ToString();
+            return $"Asiakas {kuka} maksaa ostoksensa";
+        }
+        public string PoistuJonosta()
+        {
+            string kuka = Jono.Peek().ToString();
+            Jono.Dequeue();
+            return $"{kuka} lähti jonosta. ";
         }
     }
     class Program
@@ -79,12 +87,12 @@ namespace T25_Jono
             while (alepanJono.Pituus > 0) // looppaa niin kauan kunnes jonon pituus nolla
             {
                 Console.WriteLine("----- Palvellaan jonon ensimmäistä asiakasta -----");
-                Console.WriteLine("Palvelen asiakasta:" + alepanJono.Jono.Peek());
-                Console.WriteLine(alepanJono.MaksaOstokset(alepanJono.Jono.Peek()));
-                alepanJono.PoistuJonosta(alepanJono.Jono.Peek());
+                string kuka = alepanJono.Jono.Peek().ToString();
+                Console.WriteLine(alepanJono.PalveleAsiakasta());
+                Console.WriteLine(alepanJono.MaksaOstokset());
+                Console.WriteLine(alepanJono.PoistuJonosta());
                 Console.WriteLine($"Alepan jonossa on nyt {alepanJono.Pituus} asiakasta");
             }
-            Console.WriteLine("Jono on nyt tyhjä.");
         }
     }
 }
