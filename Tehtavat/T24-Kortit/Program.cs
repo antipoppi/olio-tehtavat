@@ -33,8 +33,125 @@ namespace T24_Kortit
         public CardDeck()
         {
             Cards = new List<Card>();
+            CreateCards();
         }
         // methods
+        private void CreateCards()
+        {
+            string j; // stores the A, J, Q and K
+            // create Clubs
+            for (int i = 1; i < 14; i++)
+            {
+                if (i == 11)
+                {
+                    j = "J";
+                    Cards.Add(new Card { Suit = "Clubs", Rate = j });
+                }
+                else if (i == 12)
+                {
+                    j = "Q";
+                    Cards.Add(new Card { Suit = "Clubs", Rate = j });
+                }
+                else if (i == 13)
+                {
+                    j = "K";
+                    Cards.Add(new Card { Suit = "Clubs", Rate = j });
+                }
+                else if (i == 14)
+                {
+                    j = "A";
+                    Cards.Add(new Card { Suit = "Clubs", Rate = j });
+                }
+                else
+                {
+                    Cards.Add(new Card { Suit = "Clubs", Rate = i.ToString() });
+                }
+            }
+            // create Diamonds
+            for (int i = 1; i < 14; i++)
+            {
+                if (i == 11)
+                {
+                    j = "J";
+                    Cards.Add(new Card { Suit = "Diamonds", Rate = j });
+                }
+                else if (i == 12)
+                {
+                    j = "Q";
+                    Cards.Add(new Card { Suit = "Diamonds", Rate = j });
+                }
+                else if (i == 13)
+                {
+                    j = "K";
+                    Cards.Add(new Card { Suit = "Diamonds", Rate = j });
+                }
+                else if (i == 14)
+                {
+                    j = "A";
+                    Cards.Add(new Card { Suit = "Diamonds", Rate = j });
+                }
+                else
+                {
+                    Cards.Add(new Card { Suit = "Diamonds", Rate = i.ToString() });
+                }
+            }
+            // create Hearts
+            for (int i = 1; i < 14; i++)
+            {
+                if (i == 11)
+                {
+                    j = "J";
+                    Cards.Add(new Card { Suit = "Hearts", Rate = j });
+                }
+                else if (i == 12)
+                {
+                    j = "Q";
+                    Cards.Add(new Card { Suit = "Hearts", Rate = j });
+                }
+                else if (i == 13)
+                {
+                    j = "K";
+                    Cards.Add(new Card { Suit = "Hearts", Rate = j });
+                }
+                else if (i == 14)
+                {
+                    j = "A";
+                    Cards.Add(new Card { Suit = "Hearts", Rate = j });
+                }
+                else
+                {
+                    Cards.Add(new Card { Suit = "Hearts", Rate = i.ToString() });
+                }
+            }
+            // create Spades
+            for (int i = 1; i < 14; i++)
+            {
+                if (i == 11)
+                {
+                    j = "J";
+                    Cards.Add(new Card { Suit = "Spades", Rate = j });
+                }
+                else if (i == 12)
+                {
+                    j = "Q";
+                    Cards.Add(new Card { Suit = "Spades", Rate = j });
+                }
+                else if (i == 13)
+                {
+                    j = "K";
+                    Cards.Add(new Card { Suit = "Spades", Rate = j });
+                }
+                else if (i == 14)
+                {
+                    j = "A";
+                    Cards.Add(new Card { Suit = "Spades", Rate = j });
+                }
+                else
+                {
+                    Cards.Add(new Card { Suit = "Spades", Rate = i.ToString() });
+                }
+            }
+        }
         public void Shuffle()
         {
             int n = Cards.Count;
@@ -61,121 +178,8 @@ namespace T24_Kortit
     {
         static void Main(string[] args)
         {
-            // create a deck of cards
+            // create a fresh deck of cards
             CardDeck pakka = new CardDeck();
-            string j; // stores the A, J, Q and K
-            // create Clubs
-            for (int i = 1; i < 14; i++)
-            {
-                if (i == 11)
-                {
-                    j = "J";
-                    pakka.Cards.Add(new Card { Suit = "Clubs", Rate = j });
-                }
-                else if (i == 12)
-                {
-                    j = "Q";
-                    pakka.Cards.Add(new Card { Suit = "Clubs", Rate = j });
-                }
-                else if (i == 13)
-                {
-                    j = "K";
-                    pakka.Cards.Add(new Card { Suit = "Clubs", Rate = j });
-                }
-                else if (i == 14)
-                {
-                    j = "A";
-                    pakka.Cards.Add(new Card { Suit = "Clubs", Rate = j });
-                }
-                else
-                {
-                    pakka.Cards.Add(new Card { Suit = "Clubs", Rate = i.ToString() });
-                }
-            }
-            // create Diamonds
-            for (int i = 1; i < 14; i++)
-            {
-                if (i == 11)
-                {
-                    j = "J";
-                    pakka.Cards.Add(new Card { Suit = "Diamonds", Rate = j });
-                }
-                else if (i == 12)
-                {
-                    j = "Q";
-                    pakka.Cards.Add(new Card { Suit = "Diamonds", Rate = j });
-                }
-                else if (i == 13)
-                {
-                    j = "K";
-                    pakka.Cards.Add(new Card { Suit = "Diamonds", Rate = j });
-                }
-                else if (i == 14)
-                {
-                    j = "A";
-                    pakka.Cards.Add(new Card { Suit = "Diamonds", Rate = j });
-                }
-                else
-                {
-                    pakka.Cards.Add(new Card { Suit = "Diamonds", Rate = i.ToString() });
-                }
-            }
-            // create Hearts
-            for (int i = 1; i < 14; i++)
-            {
-                if (i == 11)
-                {
-                    j = "J";
-                    pakka.Cards.Add(new Card { Suit = "Hearts", Rate = j });
-                }
-                else if (i == 12)
-                {
-                    j = "Q";
-                    pakka.Cards.Add(new Card { Suit = "Hearts", Rate = j });
-                }
-                else if (i == 13)
-                {
-                    j = "K";
-                    pakka.Cards.Add(new Card { Suit = "Hearts", Rate = j });
-                }
-                else if (i == 14)
-                {
-                    j = "A";
-                    pakka.Cards.Add(new Card { Suit = "Hearts", Rate = j });
-                }
-                else
-                {
-                    pakka.Cards.Add(new Card { Suit = "Hearts", Rate = i.ToString() });
-                }
-            }
-            // create Spades
-            for (int i = 1; i < 14; i++)
-            {
-                if (i == 11)
-                {
-                    j = "J";
-                    pakka.Cards.Add(new Card { Suit = "Spades", Rate = j });
-                }
-                else if (i == 12)
-                {
-                    j = "Q";
-                    pakka.Cards.Add(new Card { Suit = "Spades", Rate = j });
-                }
-                else if (i == 13)
-                {
-                    j = "K";
-                    pakka.Cards.Add(new Card { Suit = "Spades", Rate = j });
-                }
-                else if (i == 14)
-                {
-                    j = "A";
-                    pakka.Cards.Add(new Card { Suit = "Spades", Rate = j });
-                }
-                else
-                {
-                    pakka.Cards.Add(new Card { Suit = "Spades", Rate = i.ToString() });
-                }
-            }
             // Show all the cards
             Console.WriteLine(pakka.ShowDeck());
             // shuffle the deck
