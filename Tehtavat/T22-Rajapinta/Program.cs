@@ -12,31 +12,33 @@ namespace T22_Rajapinta
     {
         string OtaKuva();
     }
-    public class Puhelin
+    public class Puhelin : IValokuva
     {
         public string Malli { get; set; }
         public int Valmistusvuosi { get; set; }
-        public virtual string Soita()
+        public string Soita()
         {
             return "Jotain soittamista tapahtuu kännykällä";
         }
-        public virtual string OtaKuva()
+        public string OtaKuva()
         {
             return "Kuva otettu nopeasti puhelimen takakameralla";
         }
     }
-    public class Tabletti : Puhelin
+    public class Tabletti : IValokuva
     {
-        public override string Soita()
+        public string Malli { get; set; }
+        public int Valmistusvuosi { get; set; }
+        public string Soita()
         {
             return "Pädillä tapahtuu jotain soittamista internet-yhteyden yli";
         }
-        public override string OtaKuva()
+        public string OtaKuva()
         {
             return "Selfie-kuva otettu kätevästi pädin etukameralla";
         }
     }
-    public class Kamera
+    public class Kamera : IValokuva
     {
         public string Malli { get; set; }
         public int ValmistusVuosi { get; set; }
@@ -46,7 +48,7 @@ namespace T22_Rajapinta
         }
         public string OtaKuva()
         {
-            return "Täydellinen kvua otettu järjestelmäkameralla tarkan sommittelun ja asetusten hakemisen jälkeen";
+            return "Täydellinen kuva otettu järjestelmäkameralla tarkan sommittelun ja asetusten hakemisen jälkeen";
         }
     }
 
