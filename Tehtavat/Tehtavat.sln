@@ -61,7 +61,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T34-Lambda", "T34-Lambda\T3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T30-Jääkaappi", "T30-Jääkaappi\T30-Jääkaappi.csproj", "{D5C3D9C3-E508-442A-ABF2-ED5367B41B05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T21-Kassa", "T21-Kassa\T21-Kassa.csproj", "{9F8681A1-5FFE-4F19-9BA1-28EE38B7C899}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T21-Kassa", "T21-Kassa\T21-Kassa.csproj", "{9F8681A1-5FFE-4F19-9BA1-28EE38B7C899}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T22-Rajapinta", "T22-Rajapinta\T22-Rajapinta.csproj", "{C39C562E-B65B-415C-8C33-BB04ED850C0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -189,6 +191,10 @@ Global
 		{9F8681A1-5FFE-4F19-9BA1-28EE38B7C899}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F8681A1-5FFE-4F19-9BA1-28EE38B7C899}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F8681A1-5FFE-4F19-9BA1-28EE38B7C899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C39C562E-B65B-415C-8C33-BB04ED850C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C39C562E-B65B-415C-8C33-BB04ED850C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C39C562E-B65B-415C-8C33-BB04ED850C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C39C562E-B65B-415C-8C33-BB04ED850C0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
