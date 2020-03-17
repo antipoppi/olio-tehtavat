@@ -65,6 +65,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T21-Kassa", "T21-Kassa\T21-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T22-Rajapinta", "T22-Rajapinta\T22-Rajapinta.csproj", "{C39C562E-B65B-415C-8C33-BB04ED850C0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T31-MiniASIO", "T31-MiniASIO\T31-MiniASIO.csproj", "{0F6CFFC3-8F1C-41D8-A982-21AEB2B2D4CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -195,6 +197,10 @@ Global
 		{C39C562E-B65B-415C-8C33-BB04ED850C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C39C562E-B65B-415C-8C33-BB04ED850C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C39C562E-B65B-415C-8C33-BB04ED850C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F6CFFC3-8F1C-41D8-A982-21AEB2B2D4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F6CFFC3-8F1C-41D8-A982-21AEB2B2D4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F6CFFC3-8F1C-41D8-A982-21AEB2B2D4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F6CFFC3-8F1C-41D8-A982-21AEB2B2D4CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
