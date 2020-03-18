@@ -14,44 +14,76 @@
  * Luo delegaatista instanssi ja kiinnitä siihen tarvittavat metodit. Voilá.
  */
 
-
 using System;
 
 namespace T33_Delegaatti
 {
     class Program
     {
+        // delegate
         delegate void FormatText(string text);
         static void Main(string[] args)
         {
-            Console.WriteLine("Syötä merkkijono: ");
-            string inputText = Console.ReadLine();
-            Console.WriteLine("Syötä ne numerot mitkä haluat syöttämälläsi merkkijonolle tehdä (esim. 124: ");
-            Console.WriteLine("- 1.muuttaa merkkijonon kaikki kirjaimet isoiksi kirjaimiksi");
-            Console.WriteLine("- 2.muuttaa merkkijonon kaikki kirjaimet pieniksi kirjaimiksi");
-            Console.WriteLine("- 3.muuttaa merkkijonon Otsikko-tyyllin, eli ensimmäinen merkki isolla ja loput pienellä");
-            Console.WriteLine("- 4.kääntää merkkijonon toistepäin eli sanasta Teppo tulee oppeT");
-            string inputNmbs = Console.ReadLine();
-            FormatText formatter = new FormatText(Start);
-            if (inputNmbs.Contains("1"))
+            try
             {
-                formatter += Format1;
+                // ask for a string input and read it
+                Console.WriteLine("Syötä merkkijono: ");
+                string inputText = Console.ReadLine();
+                FormatText formatter = new FormatText(StartDelegate); // create a delegate instance
+                while (true)
+                {
+                    try
+                    {
+                        // asks what user want to do with the input string and reads the selection(s)
+                        Console.WriteLine("\nValitse haluamasi käsittely, voit antaa useamman käsittelyn kerralla yhtenä merkkijonona (esim '123'): ");
+                        Console.WriteLine("- 1: isoiksi kirjaimiksi");
+                        Console.WriteLine("- 2: pieniksi kirjaimiksi");
+                        Console.WriteLine("- 3: otsikoksi");
+                        Console.WriteLine("- 4: palindromiksi");
+                        Console.WriteLine("- 0: Lopettaa ohjelman\n");
+                        Console.Write("Valinta: ");
+                        string inputNmbs = Console.ReadLine();
+                        Console.WriteLine();
+                        if (inputNmbs.Contains("1")) // sets delegate to include method Format1
+                        {
+                            formatter += Format1;
+                        }
+                        if (inputNmbs.Contains("2")) // sets delegate to include method Format2
+                        {
+                            formatter += Format2;
+                        }
+                        if (inputNmbs.Contains("3")) // sets delegate to include method Format3
+                        {
+                            formatter += Format3;
+                        }
+                        if (inputNmbs.Contains("4")) // sets delegate to include method Format4
+                        {
+                            formatter += Format4;
+                        }
+                        if (inputNmbs.Contains("0")) // ends program
+                        {
+                            Console.WriteLine("Ohjelma lopettiin onnistuneesti.");
+                            break;
+                        }
+                        formatter(inputText);
+                    }
+                    catch (ArgumentNullException ex)
+                    {
+                        Console.WriteLine("Parametrissa ongelma: " + ex.Message);
+                    }
+                }
             }
-            if (inputNmbs.Contains("2"))
+            catch (OutOfMemoryException ex)
             {
-                formatter += Format2;
+                Console.WriteLine("Muisti loppu: " + ex.Message);
             }
-            if (inputNmbs.Contains("3"))
+            catch (ArgumentOutOfRangeException ex)
             {
-                formatter += Format3;
+                Console.WriteLine("Syötteessä ongelma: " + ex.Message);
             }
-            if (inputNmbs.Contains("4"))
-            {
-                formatter += Format4;
-            }
-            formatter(inputText);   
         }
-        static void Start(string input) { }
+        // methods
+        static void StartDelegate(string input) { }
         static void Format1(string input)
         {
             string textHold = input.ToUpper();
@@ -65,7 +97,7 @@ namespace T33_Delegaatti
         static void Format3(string input)
         {
             string textHold = (char.ToUpper(input[0]) + input.Substring(1));
-            Console.WriteLine("Teksti pienellä: " + textHold);
+            Console.WriteLine("Teksti otsikkona: " + textHold);
         }
         static void Format4(string inputText)
         {
