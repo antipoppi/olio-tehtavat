@@ -29,7 +29,6 @@ namespace T33_Delegaatti
                 // ask for a string input and read it
                 Console.WriteLine("Syötä merkkijono: ");
                 string inputText = Console.ReadLine();
-                FormatText formatter = new FormatText(StartDelegate); // create a delegate instance
                 while (true)
                 {
                     try
@@ -44,6 +43,7 @@ namespace T33_Delegaatti
                         Console.Write("Valinta: ");
                         string inputNmbs = Console.ReadLine();
                         Console.WriteLine();
+                        FormatText formatter = new FormatText(StartDelegate); // create a delegate instance
                         if (inputNmbs.Contains("1")) // sets delegate to include method Format1
                         {
                             formatter += Format1;
