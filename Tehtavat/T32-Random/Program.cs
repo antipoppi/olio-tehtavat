@@ -28,10 +28,10 @@ namespace T32_Random
         public string Surname { get; private set; }
         public Person()
         {
-            Firstname = RndFirstname();
-            Surname = RndSurname();
+            Firstname = GetRndFirstname();
+            Surname = GetRndSurname();
         }
-        public string RndFirstname()
+        public string GetRndFirstname()
         {
             string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             StringBuilder firstName = new StringBuilder();
@@ -41,7 +41,7 @@ namespace T32_Random
             }
             return firstName.ToString();
         }
-        public string RndSurname()
+        public string GetRndSurname()
         {
             string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             StringBuilder sukunimi = new StringBuilder();
@@ -92,13 +92,15 @@ namespace T32_Random
             int count = 0;
             do
             {
+                // checks every person in the list with the same firstname and prints it to the console
+                // when finished, it creates a new person and search again until it has printed 1000 times.
                 Person person = new Person();
-                foreach (Person item in list)
+                foreach (Person item in list) 
                 {
                     if (item.Firstname == person.Firstname)
                     {
                         count++;
-                        Console.WriteLine($"Found person {count} with {person.Firstname} firstname : {item.ToString()}");
+                        Console.WriteLine($"Found person #{count} with {person.Firstname} firstname : {item.ToString()}");
                     }
                 }
             } while (count < 1000);
