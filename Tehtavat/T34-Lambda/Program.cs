@@ -25,9 +25,13 @@ namespace T34_Lambda
 {
     public class Friend
     {
+        #region Properties
         public string Name { get; set; }
         public string Email { get; set; }
         public string Country { get; set; }
+        #endregion
+
+        #region Constructors
         public Friend()
         {
         }
@@ -37,18 +41,29 @@ namespace T34_Lambda
             Email = email;
             Country = country;
         }
+        #endregion
+
+        #region Methods
         public override string ToString()
         {
             return $"{Name} {Email} {Country}";
         }
+        #endregion
     }
     public class Mailbook
     {
+        #region Properties
         public List<Friend> Friends { get; }
+        #endregion
+
+        #region Constructors
         public Mailbook()
         {
             Friends = new List<Friend>(GetFriendlist());
         }
+        #endregion
+
+        #region Methods
         private List<Friend> GetFriendlist()
         {
             try
@@ -100,30 +115,146 @@ namespace T34_Lambda
                 throw new Exception($"Tiedoston sulkeminen ei onnistu: {ex.Message}");
             }
         }
+        public void SaveFriend(Friend friend)
+        {
+            // save new friend to the Friends-list
+            Friends.Add(friend);
+            // save new friend also to the "tutut.csv"-file
+            try
+            {
+                string path = Directory.GetCurrentDirectory() + @"\tutut.csv";
+                StreamWriter sw = File.AppendText(path);
+                sw.WriteLine($"{friend.Name};{friend.Email};{friend.Country}");
+                try
+                {
+                    sw.Close();
+                }
+                catch (EncoderFallbackException ex)
+                {
+                    throw new Exception($"Tiedoston sulkeminen ei onnistu: {ex.Message}");
+                }
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                throw new Exception("Ei voi lukea tiedostoa: " + ex.Message);
+            }
+            catch (ArgumentException ex)
+            {
+                throw new Exception("Ei voi lisätä kaveria: " + ex.Message);
+            }
+            catch (PathTooLongException ex)
+            {
+                throw new Exception("Tiedostopolku liian pitkä: " + ex.Message);
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                throw new Exception("Kansiota ei löydy: " + ex.Message);
+            }
+            catch (NotSupportedException ex)
+            {
+                throw new Exception("Ei voi lisätä kaveria: " + ex.Message);
+            }
+        }
+        public string FindFriend(string firstLetters)
+        {
+            try
+            {
+                var foo = Friends.FindAll(x => x.Name.StartsWith(firstLetters));
+                if (foo != null)
+                {
+                    string foundFriends = " - " + string.Join("\n - ", foo.Select(x => x.ToString()));
+                    return $"\nLöydettiin kaveri/kavereita kirjaimilla '{firstLetters}': \n{foundFriends}";
+                }
+                else
+                    return $"Ei löytynyt ketään {firstLetters} alkuista kaveria";
+            }
+            catch (ArgumentNullException ex)
+            {
+                return "Kaverin etsiminen epäonnistui: " + ex.Message;
+            }
+            catch (OutOfMemoryException ex)
+            {
+                return "Kaverin etsiminen epäonnistui: " + ex.Message;
+            }
+        }
+        public string FindFriendCountry(string country)
+        {
+            try
+            {
+                var foo = Friends.Where(x => x.Country == country).ToList();
+                if (foo != null)
+                {
+                    string foundFriends = " - " + string.Join("\n - ", foo.Select(x => x.ToString()));
+                    return $"\nLöydettiin kaveri/kavereita maatunnuksella {country}: \n{foundFriends}";
+                }
+                else
+                    return $"Ei löytynyt ketään kaveria maatunnuksella {country}";
+            }
+            catch (ArgumentNullException ex)
+            {
+                return "Kaverin etsiminen epäonnistui: " + ex.Message;
+            }
+            catch (OutOfMemoryException ex)
+            {
+                return "Kaverin etsiminen epäonnistui: " + ex.Message;
+            }
+        }
+        #endregion
     }
-
     class Program
     {
+        #region Main program
         static void Main(string[] args)
         {
             Mailbook myMailBook = new Mailbook();
-            myMailBook.Friends.ForEach(x => Console.WriteLine(x.ToString()));
-
-            // haetaan tietyn nimisiä kavereita
-            //Console.WriteLine("Haetaan kavereita, anna nimen alkukirjain: ");
-            //string fl = Console.ReadLine(); // fl (first letter)
-            var foo = myMailBook.Friends.FirstOrDefault(x => x.Name.StartsWith("wololoo"));
-            if (foo != null)
-                Console.WriteLine(foo.Name + " " + foo.Email);
-            else
-                Console.WriteLine("Ei löytynyt ketään alkuista kaveria");
-            // huom metodi voi löytää yhden kaverin tai olla löytämättä
-            //if (foo != null)
-            //    Console.WriteLine(foo.Name + " " + foo.Email);
-            //else
-            //    Console.WriteLine("Ei löytynyt ketään {0} alkuista kaveria", fl);
-            // haetaan kaikki suomalaiset kaverit
-            //friendList.Where(x => x.Country == "FIN").ToList().ForEach(x => Console.WriteLine(x.Name)); // jos ei löydy, foreach ei toteudu vaikka lista on tyhjä
+            PrintAllFriends(myMailBook);
+            // lisätään uusi kaveri listaan/tiedostoon
+            myMailBook.SaveFriend(new Friend("Matti Meikäläinen", "mm@none.com", "FIN"));
+            PrintAllFriends(myMailBook);
+            // haetaan tietyn nimisiä kavereita kysymällä haettavan kaverin alkukirjaimia ja tulostetaan löydetyt konsoliin
+            AskFirstLetters(myMailBook);
+            // haetaan kaikki kaverit tietystä maasta ja tulostetaan ne konsoliin
+            Console.WriteLine(myMailBook.FindFriendCountry("USA"));
         }
+        #endregion
+
+        #region Main methods
+        public static void PrintAllFriends(Mailbook mailbook)
+        {
+            try
+            {
+                mailbook.Friends.ForEach(x => Console.WriteLine(x.ToString()));
+            }
+            catch (ArgumentNullException ex)
+            {
+                Console.WriteLine("Ei voinut tulostaa haettuja kavereita: " + ex.Message);
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine("Ei voinut tulostaa haettuja kavereita: " + ex.Message);
+            }
+        }
+        public static void AskFirstLetters(Mailbook mailbook)
+        {
+            try
+            {
+                Console.Write("\nSyötä haettavan kaverin alkukirjaimet: ");
+                string firstLetters = Console.ReadLine();
+                Console.WriteLine(mailbook.FindFriend(firstLetters));
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine("Ei voinut lukea syötettä: " + ex.Message);
+            }
+            catch (OutOfMemoryException ex)
+            {
+                Console.WriteLine("Ei voinut lukea syötettä: " + ex.Message);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine("Ei voinut lukea syötettä: " + ex.Message);
+            }
+        }
+        #endregion
     }
 }
