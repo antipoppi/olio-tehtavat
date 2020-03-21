@@ -42,10 +42,10 @@ namespace T35_Laskutoimituksia
         static void Main(string[] args)
         {
             double[] taulukko = { 1.0, 2.0, 3.3, 5.5, 6.3, -4.5, 12.0 };
-            Console.WriteLine(ArrayCalcs.Sum(taulukko));
-            Console.WriteLine(ArrayCalcs.Average(taulukko));
-            Console.WriteLine(ArrayCalcs.Min(taulukko));
-            Console.WriteLine(ArrayCalcs.Max(taulukko));
+            Console.WriteLine("Sum: " + ArrayCalcs.Sum(taulukko));
+            Console.WriteLine("Ave: " + ArrayCalcs.Average(taulukko));
+            Console.WriteLine("Min: " + ArrayCalcs.Min(taulukko));
+            Console.WriteLine("Max: " + ArrayCalcs.Max(taulukko));
         }
     }
 }
