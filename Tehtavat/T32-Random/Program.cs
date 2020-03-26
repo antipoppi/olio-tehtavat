@@ -49,7 +49,7 @@ namespace T32_Random
                 }
                 catch (ArgumentOutOfRangeException ex)
                 {
-                    return "Kirjaimen arvonta epäonnistui: " + ex.Message;
+                    throw new Exception($"Kirjaimen arvonta epäonnstui: " + ex.Message);
                 }
             }
             return firstName.ToString();
@@ -66,7 +66,7 @@ namespace T32_Random
                 }
                 catch (ArgumentOutOfRangeException ex)
                 {
-                    return "Kirjaimen arvonta epäonnistui: " + ex.Message;
+                    throw new Exception($"Kirjaimen arvonta epäonnstui: " + ex.Message);
                 }
             }
             return sukunimi.ToString();
