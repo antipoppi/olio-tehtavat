@@ -80,15 +80,12 @@ namespace T37_Ostokset
         }
         public void UpdateTotalItemInfo()
         {
+            // update ItemsCount
             try
             {
                 List<InvoiceItem> uniikit = Items.GroupBy(x => x.Name).Select(y => y.First()).ToList();
                 if (uniikit != null)
                     ItemsCount = uniikit.Count;
-                foreach (InvoiceItem item in Items)
-                {
-                    ItemsTogether += item.Quantity;
-                }
             }
             catch (ArgumentNullException ex)
             {
@@ -97,6 +94,11 @@ namespace T37_Ostokset
             catch (InvalidOperationException ex)
             {
                 throw new Exception("Uniikkien tavaroiden laskeminen epäonnistui: " + ex.Message);
+            }
+            // update ItemsTogether
+            foreach (InvoiceItem item in Items)
+            {
+                ItemsTogether += item.Quantity;
             }
         }
     }
