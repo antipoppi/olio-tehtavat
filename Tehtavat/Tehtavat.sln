@@ -75,9 +75,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T35-Laskutoimituksia", "T35
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T35-LaskutoimituksiaTests", "T35-LaskutoimituksiaTests\T35-LaskutoimituksiaTests.csproj", "{B9A53A68-553C-49DE-AF69-61C7A4596E47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T36-Ostoskärry", "T36-Ostoskärry\T36-Ostoskärry.csproj", "{38770F11-E3E6-41B1-8906-1D54066371F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T36-Ostoskärry", "T36-Ostoskärry\T36-Ostoskärry.csproj", "{38770F11-E3E6-41B1-8906-1D54066371F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T36-OstoskärryTests", "T36-OstoskärryTests\T36-OstoskärryTests.csproj", "{8DDFFB85-CC8E-429A-AC3D-2763A57F6094}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T36-OstoskärryTests", "T36-OstoskärryTests\T36-OstoskärryTests.csproj", "{8DDFFB85-CC8E-429A-AC3D-2763A57F6094}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T37-Ostokset", "T37-Ostokset\T37-Ostokset.csproj", "{E9F28F9A-D4F1-4AA4-8AC4-A4839E439448}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -237,6 +239,10 @@ Global
 		{8DDFFB85-CC8E-429A-AC3D-2763A57F6094}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DDFFB85-CC8E-429A-AC3D-2763A57F6094}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DDFFB85-CC8E-429A-AC3D-2763A57F6094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9F28F9A-D4F1-4AA4-8AC4-A4839E439448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9F28F9A-D4F1-4AA4-8AC4-A4839E439448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9F28F9A-D4F1-4AA4-8AC4-A4839E439448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9F28F9A-D4F1-4AA4-8AC4-A4839E439448}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
