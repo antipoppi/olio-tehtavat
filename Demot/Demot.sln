@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoRajapinta", "DemoRajapi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPelaajat", "WpfPelaajat\WpfPelaajat.csproj", "{B6212D4C-5475-4DAE-8FBE-36DA5569E23B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLaskin", "DemoLaskin\DemoLaskin.csproj", "{E5F692FE-314E-4963-B5E6-A0EEBFEE0362}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoLaskin", "DemoLaskin\DemoLaskin.csproj", "{E5F692FE-314E-4963-B5E6-A0EEBFEE0362}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLaskinTests", "DemoLaskinTests\DemoLaskinTests.csproj", "{BD4B23EA-8FE9-41EA-AAEC-91C3225F1487}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoLaskinTests", "DemoLaskinTests\DemoLaskinTests.csproj", "{BD4B23EA-8FE9-41EA-AAEC-91C3225F1487}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoT37", "DemoT37\DemoT37.csproj", "{9EF107E3-6AB3-40D7-BCF8-75E3D5E977CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{BD4B23EA-8FE9-41EA-AAEC-91C3225F1487}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD4B23EA-8FE9-41EA-AAEC-91C3225F1487}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD4B23EA-8FE9-41EA-AAEC-91C3225F1487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EF107E3-6AB3-40D7-BCF8-75E3D5E977CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF107E3-6AB3-40D7-BCF8-75E3D5E977CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF107E3-6AB3-40D7-BCF8-75E3D5E977CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF107E3-6AB3-40D7-BCF8-75E3D5E977CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
