@@ -79,7 +79,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T36-Ostoskärry", "T36-Osto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T36-OstoskärryTests", "T36-OstoskärryTests\T36-OstoskärryTests.csproj", "{8DDFFB85-CC8E-429A-AC3D-2763A57F6094}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T37-Ostokset", "T37-Ostokset\T37-Ostokset.csproj", "{E9F28F9A-D4F1-4AA4-8AC4-A4839E439448}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T37-Ostokset", "T37-Ostokset\T37-Ostokset.csproj", "{E9F28F9A-D4F1-4AA4-8AC4-A4839E439448}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T38-Noppa", "T38-Noppa\T38-Noppa.csproj", "{27F28E57-2688-4C30-8259-0FEBC160AD21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -243,6 +245,10 @@ Global
 		{E9F28F9A-D4F1-4AA4-8AC4-A4839E439448}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9F28F9A-D4F1-4AA4-8AC4-A4839E439448}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9F28F9A-D4F1-4AA4-8AC4-A4839E439448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27F28E57-2688-4C30-8259-0FEBC160AD21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F28E57-2688-4C30-8259-0FEBC160AD21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F28E57-2688-4C30-8259-0FEBC160AD21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F28E57-2688-4C30-8259-0FEBC160AD21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
