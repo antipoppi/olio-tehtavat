@@ -12,14 +12,103 @@
  */
 
 using System;
+using System.Collections.Generic;
 
 namespace T40_Kuviot
 {
+    public abstract class Shape
+    {
+        public string Name { get; set; }
+        public abstract double Area(); // pinta-ala
+        public abstract double Circumference(); // ympärysmitta
+        public override string ToString()
+        {
+            return $"Name: {Name}";
+        }
+    }
+    public class Circle : Shape
+    {
+        public double Radius { get; }
+        public double CircleArea { get; }
+        public double CircleCircumference { get; }
+        public Circle(double radius)
+        {
+            Name = "Circle";
+            Radius = radius;
+            CircleArea = Area();
+            CircleCircumference = Circumference();
+        }
+        public override double Area()
+        {
+            double a = Math.PI * Math.Pow(Radius, 2);
+            return a;
+        }
+        public override double Circumference()
+        {
+            double c = 2 * Math.PI * Radius;
+            return c;
+        }
+        public override string ToString()
+        {
+            return base.ToString() + $"\n- Radius: {Radius}m\n- Area: {CircleArea.ToString("0.00")}m^2" +
+                $"\n- Circumference: {CircleCircumference.ToString("0.00")}m\n";
+        }
+    }
+    public class Rectangle : Shape
+    {
+        public double Xaxis { get; }
+        public double Yaxis { get; }
+        public double RectangleArea { get; }
+        public double RectangleCircumference { get; }
+        public Rectangle(double x, double y)
+        {
+            Name = "Rectangle";
+            Xaxis = x;
+            Yaxis = y;
+            RectangleArea = Area();
+            RectangleCircumference = Circumference();
+        }
+        public override double Area()
+        {
+            double a = Xaxis * Yaxis;
+            return a;
+        }
+        public override double Circumference()
+        {
+            double c = Xaxis * 2 + Yaxis * 2;
+            return c;
+        }
+        public override string ToString()
+        {
+            return base.ToString() + $"\n- X: {Xaxis}m\n- Y: {Yaxis}m\n- Area: {RectangleArea.ToString("0.00")}m^2," +
+                $"\n- Circumference: {RectangleCircumference.ToString("0.00")}m\n";
+        }
+    }
+    public class Shapes
+    {
+        public List<Shape> MyShapes { get; }
+        public Shapes()
+        {
+            MyShapes = new List<Shape>();
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Shapes shapes = new Shapes();
+            shapes.MyShapes.Add(new Circle(5));
+            shapes.MyShapes.Add(new Circle(3.2));
+            shapes.MyShapes.Add(new Rectangle(5,3));
+            shapes.MyShapes.Add(new Rectangle(2.4,3.8));
+            PrintShapes(shapes);
+        }
+        public static void PrintShapes(Shapes shapes)
+        {
+            foreach (var item in shapes.MyShapes)
+            {
+                Console.WriteLine(item.ToString()); ;
+            }
         }
     }
 }
