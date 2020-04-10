@@ -56,31 +56,31 @@ namespace T40_Kuviot
     }
     public class Rectangle : Shape
     {
-        public double Xaxis { get; }
-        public double Yaxis { get; }
+        public double Width { get; }
+        public double Height { get; }
         public double RectangleArea { get; }
         public double RectangleCircumference { get; }
         public Rectangle(double x, double y)
         {
             Name = "Rectangle";
-            Xaxis = x;
-            Yaxis = y;
+            Width = x;
+            Height = y;
             RectangleArea = Area();
             RectangleCircumference = Circumference();
         }
         public override double Area()
         {
-            double a = Xaxis * Yaxis;
+            double a = Width * Height;
             return a;
         }
         public override double Circumference()
         {
-            double c = Xaxis * 2 + Yaxis * 2;
+            double c = Width * 2 + Height * 2;
             return c;
         }
         public override string ToString()
         {
-            return base.ToString() + $"\n- X: {Xaxis}m\n- Y: {Yaxis}m\n- Area: {RectangleArea.ToString("0.00")}m^2," +
+            return base.ToString() + $"\n- Width: {Width}m\n- Height: {Height}m\n- Area: {RectangleArea.ToString("0.00")}m^2," +
                 $"\n- Circumference: {RectangleCircumference.ToString("0.00")}m\n";
         }
     }
